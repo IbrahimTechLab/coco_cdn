@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Media CDN - Coco Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .media-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    img, video {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .link {
+      margin-top: 8px;
+      word-break: break-all;
+      font-size: 12px;
+      color: #38bdf8;
+    }
+
+    button {
+      margin-top: 5px;
+      padding: 5px 10px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📦 Coco Design Media CDN</h1>
+<p>Copie les liens ci-dessous pour utiliser les médias dans tes apps.</p>
+
+<div class="media-container" id="mediaContainer"></div>
+
+<script>
+  // ⚠️ CHANGE ceci avec ton vrai repo GitHub Pages
+  const BASE_URL = "https://github.com/IbrahimTechLab/coco_cdn.git";
+
+  const files = [
+    "00557.MTS",
+    "00561.MTS",
+    "00564.MTS",
+    "00574.MTS",
+    "00582.MTS",
+    "00585.MTS",
+    "00589.MTS",
+    "00593.MTS",
+    "00598.MTS",
+    "00615.MTS",
+    "00616.MTS",
+    "00624.MTS",
+    "00627.MTS",
+    "00634.MTS",
+    "00636.MTS",
+    "00639.MTS",
+
+    "1770710162400.png",
+    "1770710924143.png",
+    "1770724242259.png",
+    "1770874302713.png",
+    "1770874647484.png",
+
+    "IMG_20260128_185913_188.jpg.jpeg",
+    "IMG_20260215_111257_596.jpg.jpeg",
+
+    "poster_2026-02-09-092108.png",
+    "poster_2026-02-09-093429.png",
+    "poster_2026-02-09-093525.png"
+  ];
+
+  const container = document.getElementById("mediaContainer");
+
+  function copyLink(link) {
+    navigator.clipboard.writeText(link);
+    alert("Lien copié !");
+  }
+
+  files.forEach(file => {
+    const url = BASE_URL + file;
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    let media;
+
+    if (file.match(/\.(png|jpg|jpeg|gif)$/i)) {
+      media = document.createElement("img");
+      media.src = url;
+    } else if (file.match(/\.(mts|mp4|webm)$/i)) {
+      media = document.createElement("video");
+      media.src = url;
+      media.controls = true;
+    }
+
+    const link = document.createElement("div");
+    link.className = "link";
+    link.innerText = url;
+
+    const btn = document.createElement("button");
+    btn.innerText = "Copier le lien";
+    btn.onclick = () => copyLink(url);
+
+    card.appendChild(media);
+    card.appendChild(link);
+    card.appendChild(btn);
+
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
