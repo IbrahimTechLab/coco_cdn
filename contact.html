@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – COCO DESIGN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #5d4037; /* Marron élégant tiré de tes images */
+      --accent-color: #d4a373;
+      --text-dark: #2d2d2d;
+      --bg-light: #faf9f6;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      padding: 20px 5%;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo img { height: 50px; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: var(--accent-color); }
+
+    /* Section Contact */
+    .contact-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      color: #666;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      margin-top: 25px;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+    }
+
+    /* Bouton WhatsApp */
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp svg {
+      margin-right: 10px;
+      fill: white;
+    }
+
+    /* Image & Citation */
+    .contact-portrait {
+      text-align: center;
+    }
+
+    .contact-portrait img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      filter: grayscale(20%);
+      transition: filter 0.5s;
+    }
+
+    .contact-portrait img:hover { filter: grayscale(0%); }
+
+    .caption {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      margin-top: 20px;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      <strong style="font-family:'Playfair Display'; font-size: 1.5rem;">COCO DESIGN</strong>
+    </div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="visite.html">Visite</a></li>
+      <li><a href="catalogue.html">Catalogue</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section contact-section">
+  <h1 class="section-title">Parlons de votre projet</h1>
+  <p class="intro-text">
+    Chaque espace raconte une histoire. Pour une commande sur mesure ou une visite à l'atelier de Niamey, nous sommes à votre écoute.
+  </p>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Adresse</h3>
+      <p>📍 Niamey, quartier Recasement 2ème latérite</p>
+
+      <h3>Horaires</h3>
+      <p>
+        <strong>Lun - Ven :</strong> 09h – 18h<br>
+        <strong>Sam - Dim :</strong> 10h – 13h30
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        📧 cocodesign@gmail.com
+      </p>
+
+      <a href="https://wa.me/22790787822?text=Bonjour%20COCO%20DESIGN,%20je%20souhaiterais%20avoir%20plus%20d'informations%20sur..." class="btn-whatsapp" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.48s3.481 5.229 3.481 8.406c0 6.556-5.333 11.888-11.889 11.888-2.013 0-3.999-.512-5.762-1.483l-6.121 1.706zm6.104-3.513c1.648.978 3.516 1.494 5.432 1.494 5.728 0 10.388-4.66 10.388-10.388 0-2.775-1.082-5.384-3.046-7.348s-4.573-3.045-7.344-3.045c-5.728 0-10.389 4.66-10.389 10.388 0 1.932.511 3.82 1.478 5.485l-.994 3.633 3.725-.979zm11.236-5.321c-.301-.15-1.785-.881-2.061-.981-.277-.1-.478-.15-.679.15-.201.301-.778.981-.954 1.181-.176.2-.351.226-.653.075-.301-.15-1.272-.469-2.422-1.495-.893-.797-1.495-1.782-1.671-2.082-.176-.301-.019-.464.131-.614.136-.135.301-.351.451-.527.151-.176.201-.301.301-.502.101-.2.051-.376-.026-.526-.076-.15-.679-1.636-.931-2.242-.245-.591-.494-.511-.679-.521-.176-.008-.376-.01-.577-.01-.201 0-.527.075-.803.376-.277.301-1.054 1.029-1.054 2.509 0 1.48 1.079 2.911 1.23 3.112.15.201 2.124 3.243 5.143 4.545.718.31 1.279.495 1.716.635.721.23 1.376.197 1.894.12.578-.087 1.785-.73 2.035-1.432.251-.702.251-1.305.176-1.432-.075-.127-.276-.201-.577-.352z"/></svg>
+        Nous contacter sur WhatsApp
+      </a>
+    </div>
+
+    <div class="contact-portrait">
+      <img src="./assests/images/aziz.png" alt="Aziz Kouka Hassane">
+      <p class="caption">
+        « L’atelier est un lieu de dialogue. Chaque visite est une rencontre. »
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 COCO DESIGN – Niamey</p>
+</footer>
+
+</body>
+</html>

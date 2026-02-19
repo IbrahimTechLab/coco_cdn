@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue – COCO DESIGN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root { --primary: #5d4037; --accent: #d4a373; --bg: #faf9f6; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; color: #333; }
+    
+    header { padding: 20px 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+    nav ul { list-style: none; display: flex; gap: 25px; margin: 0; }
+    nav a { text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; font-size: 0.9rem; }
+    nav a:hover { color: var(--accent); }
+
+    .section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 3rem; text-align: center; margin-bottom: 15px; color: var(--primary); }
+    .intro-text { text-align: center; max-width: 700px; margin: 0 auto 50px; color: #666; font-size: 1.1rem; }
+    
+    .section-subtitle { font-family: 'Playfair Display', serif; font-size: 2rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 30px; color: var(--primary); }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.03); transition: 0.4s ease; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+    .card img { width: 100%; height: 280px; object-fit: cover; transition: 0.5s; }
+    .card:hover img { transform: scale(1.05); }
+    .card-content { padding: 25px; }
+    .card h3 { font-family: 'Playfair Display', serif; margin: 0 0 10px 0; color: var(--primary); font-size: 1.4rem; }
+    .card p { font-size: 0.95rem; color: #777; margin: 0; line-height: 1.5; }
+
+    footer { text-align: center; padding: 60px; margin-top: 60px; background: white; color: #999; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><strong style="font-family:'Playfair Display'; font-size: 1.4rem;">COCO DESIGN</strong></div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">L'Artiste</a></li>
+      <li><a href="visite.html">Visite Virtuelle</a></li>
+      <li><a href="catalogue.html" style="color: var(--accent)">Catalogue</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="section">
+  <h1 class="section-title">Catalogue</h1>
+  <p class="intro-text">
+    Chaque œuvre est une pièce unique, conçue pour transformer votre espace en une expérience sensorielle.
+  </p>
+
+  <h2 class="section-subtitle">Tableaux d’art</h2>
+  <div class="grid-3" id="oeuvresContainer"></div>
+</section>
+
+<section class="section" style="background: #f0ede9; padding: 80px 20px; max-width: 100%;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <h2 class="section-subtitle">Mobilier & Design</h2>
+    <div class="grid-3" id="mobilierContainer"></div>
+  </div>
+</section>
+
+<footer><p>© 2026 COCO DESIGN – L'excellence du design nigérien</p></footer>
+
+<script type="module">
+  import { oeuvres, mobilier } from "./js/data.js";
+  const renderCard = (container, items, titleKey) => {
+    items.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${item.image}" alt="${item[titleKey]}">
+        <div class="card-content">
+          <h3>${item[titleKey]}</h3>
+          <p>${item.description}</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  };
+  renderCard(document.getElementById("oeuvresContainer"), oeuvres, "titre");
+  renderCard(document.getElementById("mobilierContainer"), mobilier, "nom");
+</script>
+</body>
+</html>
