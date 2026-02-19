@@ -1,0 +1,129 @@
+/* =========================
+   COCO DESIGN – RESPONSIVE
+   ========================= */
+
+/* --------- TABLETTES --------- */
+@media (max-width: 1024px) {
+
+  header nav {
+    padding: 16px 24px;
+  }
+
+  .hero {
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .section {
+    padding: 60px 24px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .panorama-container {
+    height: 70vh;
+  }
+}
+
+/* --------- MOBILES --------- */
+@media (max-width: 768px) {
+
+  /* Navigation */
+  header nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 64px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 48px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  /* Grilles */
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Cartes */
+  .card {
+    padding: 20px;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Visite virtuelle */
+  .panorama-container {
+    height: 65vh;
+  }
+
+  .hotspot {
+    transform: scale(0.85);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 16px;
+  }
+}
+
+/* --------- PETITS MOBILES --------- */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+  }
+
+  .panorama-container {
+    height: 60vh;
+  }
+}

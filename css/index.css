@@ -1,0 +1,88 @@
+/* =========================
+   COCO DESIGN – INDEX CSS
+   ========================= */
+
+/* -------- HERO -------- */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(
+      rgba(28, 26, 24, 0.35),
+      rgba(28, 26, 24, 0.35)
+    ),
+    url("../assets/images/placeholders/hero.jpeg")
+    center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding: 0 90px;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-content h1 {
+  margin-bottom: 22px;
+  color: #fff;
+}
+
+.hero-content p {
+  margin-bottom: 42px;
+  color: #EDEAE6;
+}
+
+/* -------- UNIVERS -------- */
+.univers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 42px;
+}
+
+.univers-card {
+  background-color: #fff;
+  padding: 36px;
+  border: 1px solid rgba(74, 47, 27, 0.08);
+  transition: all var(--transition-douce);
+}
+
+.univers-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(74, 47, 27, 0.12);
+}
+
+.univers-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+}
+
+/* -------- INVITATION VISITE -------- */
+.invitation-visite {
+  background-color: var(--fond-secondaire);
+  text-align: center;
+}
+
+.invitation-visite h2 {
+  margin-bottom: 24px;
+}
+
+/* -------- PARTENAIRES -------- */
+.partenaires {
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.partenaires img {
+  height: 52px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all var(--transition-douce);
+}
+
+.partenaires img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
