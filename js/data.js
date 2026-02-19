@@ -1,7 +1,8 @@
 /* =========================
-   COCO DESIGN – DATA (Version Finale)
+   COCO DESIGN – DATA (LOCAL VERSION)
    ========================= */
 
+/* -------- INFOS SITE -------- */
 export const siteInfo = {
   nom: "COCO DESIGN",
   fondateur: "Aziz Kouka Hassane",
@@ -11,160 +12,201 @@ export const siteInfo = {
     "COCO DESIGN est une galerie et un atelier de création où l’art, le bois, la matière et l’espace dialoguent pour produire des œuvres uniques."
 };
 
-/* -------- VISITE GUIDÉE -------- */
+
+/* -------- VISITE GUIDÉE (avec tes vidéos locales) -------- */
 export const scenes = [
   {
-    id: "hall",
+    id: "entree",
     titre: "Entrée de la galerie",
-    panorama: "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00557.mp4",
+    panorama: "./assets/mp4_videos/entrée.mp4",
     narration:
-      "Bienvenue dans l’univers de COCO DESIGN. Ici, chaque espace est une invitation à ralentir et à regarder autrement."
+      "Bienvenue chez COCO DESIGN. L’entrée marque la transition entre le monde extérieur et l’univers artistique du lieu."
+  },
+  {
+    id: "showroom",
+    titre: "Showroom principal",
+    panorama: "./assets/mp4_videos/interieur1.mp4",
+    narration:
+      "Cet espace présente les œuvres majeures et les pièces emblématiques créées dans l’atelier."
   },
   {
     id: "tableaux",
     titre: "Salle des tableaux",
-    panorama: "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00561.mp4",
+    panorama: "./assets/mp4_videos/salle_tableau.mp4",
     narration:
-      "La peinture est le point de départ. Couleurs, textures et silences se rencontrent pour raconter l’invisible."
+      "Chaque tableau porte une histoire, une émotion et une empreinte unique."
   },
   {
     id: "mobilier",
-    titre: "Mobilier & aménagement",
-    panorama: "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00564.mp4",
+    titre: "Mobilier artistique",
+    panorama: "./assets/mp4_videos/canape.mp4",
     narration:
-      "Chez COCO DESIGN, l’art quitte le mur. Le bois devient forme, usage et émotion."
+      "Le mobilier devient ici une extension naturelle de l’expression artistique."
   }
 ];
 
-/* -------- ŒUVRES -------- */
+
+/* -------- ŒUVRES (tes images locales) -------- */
 export const oeuvres = [
   {
     id: 1,
-    titre: "Composition abstraite I",
-    categorie: "Tableau",
-    image: "https://github.com/user-attachments/assets/1770710162400.png",
+    titre: "Design intérieur I",
+    categorie: "Aménagement",
+    image: "./assets/images/design_intern1.png",
     description:
-      "Exploration libre de la couleur et du mouvement, où chaque couche révèle une intention."
+      "Exploration d’un espace intérieur où la lumière et la matière dialoguent."
   },
   {
     id: 2,
-    titre: "Silence chromatique",
-    categorie: "Tableau",
-    image: "https://github-production-user-asset-6210df.s3.amazonaws.com/117551294/551454141-a3d997c2-b5fe-485a-99aa-a5ad4774e02a.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260218%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260218T132737Z&X-Amz-Expires=300&X-Amz-Signature=28e915183cf45db7a74e0d71a1e78c2d03e5293d64dd338da547c9a464e9882d&X-Amz-SignedHeaders=host",
+    titre: "Design intérieur II",
+    categorie: "Aménagement",
+    image: "./assets/images/design_intern2.png",
     description:
-      "Un dialogue intérieur entre matière, lumière et émotion retenue."
+      "Une composition moderne mettant en valeur les volumes et les textures."
   },
   {
     id: 3,
-    titre: "Mémoire du geste",
-    categorie: "Tableau",
-    image: "https://github-production-user-asset-6210df.s3.amazonaws.com/117551294/551454001-42c735de-6a45-42c2-bebb-c8fce2ddbd67.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260218%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260218T134512Z&X-Amz-Expires=300&X-Amz-Signature=85947c84991fb10eeebec1f98c3849b95b29a5fcb8d07d6e37ed107f3008c3f2&X-Amz-SignedHeaders=host",
+    titre: "Design intérieur III",
+    categorie: "Aménagement",
+    image: "./assets/images/design_intern3.png",
     description:
-      "Une œuvre marquée par la répétition du geste et la profondeur du temps."
+      "Une immersion dans l’univers esthétique de COCO DESIGN."
   },
   {
     id: 4,
-    titre: "Émotion brute",
-    categorie: "Tableau",
-    image: "https://github.com/user-attachments/assets/1770874302713.png",
+    titre: "Design intérieur IV",
+    categorie: "Aménagement",
+    image: "./assets/images/design_intern4.png",
     description:
-      "La matière s’exprime sans filtre, un mouvement de couleurs et de textures."
+      "Un espace pensé pour inspirer et apaiser."
   },
   {
     id: 5,
-    titre: "Lignes suspendues",
-    categorie: "Tableau",
-    image: "https://github.com/user-attachments/assets/1770874647484.png",
+    titre: "Design intérieur V",
+    categorie: "Aménagement",
+    image: "./assets/images/design_intern5.png",
     description:
-      "Une composition qui joue sur l’espace et la tension des formes."
+      "Une harmonie entre forme, matière et lumière."
+  },
+  {
+    id: 6,
+    titre: "Siège COCO DESIGN",
+    categorie: "Architecture",
+    image: "./assets/images/siege_design.jpeg",
+    description:
+      "Le siège incarne l’identité et la vision artistique de COCO DESIGN."
+  },
+  {
+    id: 7,
+    titre: "Salle d’exposition",
+    categorie: "Architecture",
+    image: "./assets/images/siege_design1.png",
+    description:
+      "Un espace conçu pour accueillir les œuvres et les visiteurs."
+  },
+  {
+    id: 8,
+    titre: "Tableau artistique I",
+    categorie: "Tableau",
+    image: "./assets/images/tableau1.png",
+    description:
+      "Une œuvre où les couleurs traduisent une émotion profonde."
+  },
+  {
+    id: 9,
+    titre: "Tableau artistique II",
+    categorie: "Tableau",
+    image: "./assets/images/tableau2.png",
+    description:
+      "Une composition unique inspirée de la nature et du mouvement."
+  },
+  {
+    id: 10,
+    titre: "Tableau artistique III",
+    categorie: "Tableau",
+    image: "./assets/images/tableau3.jpeg",
+    description:
+      "Une exploration visuelle entre abstraction et réalité."
   }
 ];
+
 
 /* -------- MOBILIER -------- */
 export const mobilier = [
   {
     id: 1,
-    nom: "Fauteuil sculpté",
-    materiau: "Bois massif",
-    image: "https://github.com/user-attachments/assets/IMG_20260128_185913_188.jpg.jpeg",
+    nom: "Canapé artistique",
+    materiau: "Bois & textile",
+    image: "./assets/images/design_intern1.png",
     description:
-      "Pièce unique, sculptée à la main, pensée pour le confort et la présence."
+      "Une pièce centrale qui combine confort et expression artistique."
   },
   {
     id: 2,
-    nom: "Table basse organique",
-    materiau: "Bois & résine",
-    image: "https://github.com/user-attachments/assets/IMG_20260215_111257_596.jpg.jpeg",
+    nom: "Aménagement intérieur",
+    materiau: "Bois massif",
+    image: "./assets/images/design_intern4.png",
     description:
-      "Une table qui épouse la forme naturelle du bois, entre stabilité et mouvement."
+      "Un aménagement qui met en valeur l’équilibre des formes."
   }
 ];
+
 
 /* -------- POSTERS / AFFICHES -------- */
 export const posters = [
   {
     id: 1,
-    titre: "Vernissage 2026-02-09-092108",
-    image: "https://github.com/user-attachments/assets/poster_2026-02-09-092108.png"
+    titre: "COCO DESIGN Galerie",
+    image: "./assets/cocodes.png"
   },
   {
     id: 2,
-    titre: "Vernissage 2026-02-09-093429",
-    image: "https://github.com/user-attachments/assets/poster_2026-02-09-093429.png"
-  },
-  {
-    id: 3,
-    titre: "Vernissage 2026-02-09-093525",
-    image: "https://github.com/user-attachments/assets/poster_2026-02-09-093525.png"
+    titre: "Fondateur COCO DESIGN",
+    image: "./assets/aziz.png"
   }
 ];
+
 
 /* -------- PARTENAIRES -------- */
 export const partenaires = [
   {
-    nom: "Ambassade Culturelle",
-    logo: "https://dummyimage.com/300x150/000/fff&text=Partenaire+1"
-  },
-  {
-    nom: "Fondation Artistique",
-    logo: "https://dummyimage.com/300x150/333/fff&text=Partenaire+2"
-  },
-  {
-    nom: "Organisation Créative",
-    logo: "https://dummyimage.com/300x150/555/fff&text=Partenaire+3"
+    nom: "COCO DESIGN",
+    logo: "./assets/logo.jpeg"
   }
 ];
+
 
 /* -------- LE SAVIEZ-VOUS -------- */
 export const anecdotes = [
   {
-    titre: "Visite d’ambassadeurs",
+    titre: "Un lieu unique à Niamey",
     texte:
-      "Des ambassadeurs et hautes personnalités ont visité les locaux de COCO DESIGN, saluant l’originalité et la vision artistique du lieu."
+      "COCO DESIGN est un espace où l’art, le design et l’architecture se rencontrent pour créer une expérience immersive."
   },
   {
-    titre: "Créations sur mesure",
+    titre: "Créations originales",
     texte:
-      "Chaque pièce de mobilier peut être conçue sur mesure selon l’espace et la sensibilité du client."
+      "Chaque œuvre et chaque aménagement est conçu avec une attention particulière aux détails."
   }
 ];
 
-/* -------- VIDÉOS SUPPLÉMENTAIRES -------- */
+
+/* -------- TOUTES TES VIDÉOS LOCALES -------- */
 export const videos = [
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00557.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00561.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00564.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00574.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00582.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00585.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00589.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00593.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00598.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00615.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00616.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00624.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00627.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00634.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00636.mp4",
-  "https://ibrahimtechlab.github.io/coco_cdn/mp4_videos/00639.mp4"
+  "./assets/mp4_videos/entrée.mp4",
+  "./assets/mp4_videos/interieur1.mp4",
+  "./assets/mp4_videos/interieur2.mp4",
+  "./assets/mp4_videos/interieur3.mp4",
+  "./assets/mp4_videos/interieur4.mp4",
+  "./assets/mp4_videos/interieur5.mp4",
+  "./assets/mp4_videos/canape.mp4",
+  "./assets/mp4_videos/salle_tableau.mp4",
+  "./assets/mp4_videos/salle_tableau1.mp4",
+  "./assets/mp4_videos/salle_tableau2.mp4",
+  "./assets/mp4_videos/showroom_tableau1.mp4",
+  "./assets/mp4_videos/showroom_tableau2.mp4",
+  "./assets/mp4_videos/showroom_tableau3.mp4",
+  "./assets/mp4_videos/showroom_tableau4.mp4",
+  "./assets/mp4_videos/tableau1.mp4",
+  "./assets/mp4_videos/tableau2.mp4"
 ];
